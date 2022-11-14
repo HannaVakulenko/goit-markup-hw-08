@@ -1,0 +1,55 @@
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexCenterX {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin flexCenterY {
+    display: flex;
+    align-items: center;
+}
+
+@mixin flexWrap {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@mixin absCenter {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin  font($weight, $size, $height, $spacing) {
+    font-weight: $weight;
+    font-size: $size + px;
+    line-height: $height;
+    letter-spacing: $spacing + em;
+}
+
+@mixin mobile {
+    @media screen and (min-width: 480px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media screen and (min-width: 1200px) {
+        @content;
+    }
+}
+
+@mixin calc($gap, $count) {
+    width: calc((100 - $gap * ($count - 1)) / $count);
+}

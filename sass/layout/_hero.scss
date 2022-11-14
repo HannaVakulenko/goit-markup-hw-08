@@ -1,0 +1,29 @@
+.hero {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    max-width: 1600px;
+    min-height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4) ), url('../img/hero_img_1600_600.jpg');
+    background-size: cover;
+    background-position: center;
+    background-color: getColor('hero-ftr-bgc-color');
+  }
+
+  .hero-title {
+    margin: 0 auto;
+    margin-bottom: 30px;
+    width: 696px;
+    color: getColor('white-logo-color');
+    @include font (900, 44, 1.36, 0.06);
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .hero-btn {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 32px;
+    @extend .button;
+  }

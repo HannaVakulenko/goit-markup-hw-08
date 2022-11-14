@@ -1,0 +1,15 @@
+.button {
+    background-color: getColor('accent-color');
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    border-style: none;
+    color: getColor('white-logo-color');
+    font-family: inherit;
+    @include font(700, 16, 1.88, 0.06);
+    text-align: center;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+      background-color: getColor('btn-hover-focus');
+    }
+  }

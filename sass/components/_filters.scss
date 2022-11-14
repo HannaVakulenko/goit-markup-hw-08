@@ -1,0 +1,46 @@
+.filters {
+    @include flexCenterX;
+    gap: 8px;
+    @extend .list;
+
+    &__radio {
+      @extend .visually-hidden;
+    }
+
+    &__text {
+        padding: 6px 22px;
+        background-color: getColor('secondary-bgc-color');
+        border-radius: 4px;
+        border-style: none;
+        font-family: inherit;
+        font-style: normal;
+        @include font (500, 16, 1.63, 0.03);
+        text-align: center;
+        color: var(--title-text-color);
+        transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    &__text:hover, &__text:focus {
+        cursor: pointer;
+        background-color: getColor('accent-color');
+        color: getColor('white-logo-color');
+        box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+        }
+  }
+
+.portfolio-filters {
+  margin-bottom: 50px;
+}
+  
+  .current-filter {
+    background: getColor('accent-color');
+    box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+    border-radius: 4px;
+    color: getColor('white-logo-color');
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover, &:focus {
+      color: getColor('white-logo-color');
+      background-color: getColor('btn-hover-focus');
+    }
+  }
