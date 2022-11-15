@@ -1,8 +1,12 @@
 .logo {
     font-family: 'Raleway';
-    @include font (700, 26, 1.19, 0.03);
+    @include font(700, 24, 1.17, 0.03);
     color: getColor('accent-color');
     @extend .link;
+
+    @include desktop {
+      @include font(null, 26, 1.19, null);
+    }
 
     &--light {
       color: getColor('white-logo-color');

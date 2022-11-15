@@ -1,6 +1,12 @@
 .title {
-    margin-bottom: 50px;
-    @include font(700, 36, 1.17, 0.03);
-    text-align: center;
-    color: getColor('title-text-color');
+  text-align: center;
+  color: getColor('title-text-color');
+  margin-bottom: 30px;
+  @include font(700, 28, 1.18, 0.03);
+    
+    @include desktop {
+      margin-bottom: 50px;
+      @include font(null, 36, 1.17, 0.03);
+    }
+        
   }

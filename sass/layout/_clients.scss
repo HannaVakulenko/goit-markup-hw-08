@@ -6,14 +6,32 @@
     
 .clients-list {
     @extend .list;
-    @include flexCenterX;
+    display: flex;
     gap: 30px;
-    
-    
+
+    @media screen and (max-width: 1199px) {
+      flex-wrap: wrap;
+    }
+
+    @include desktop {
+      flex-wrap: nowrap;
+      justify-content: center;
+    }
+      
+    &__item {
+      @include calc(30px, 2);
+
+      @include tablet {
+        @include calc(30px, 3);
+      }
+
+      @include desktop {
+        @include calc(30px, 6)
+      }
+    }
      
     &__link {
       @include flexCenter;
-      width: 170px;
       height: 92px;
       border: 1px solid getColor('icon-current-color');
       border-radius: 4px;

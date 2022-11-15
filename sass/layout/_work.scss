@@ -1,5 +1,9 @@
 .work {
     background-color: getColor('white-logo-color');
+
+    @media screen and (max-width: 1199px) {
+      display: none;
+    }
 }
 
   .work-list {

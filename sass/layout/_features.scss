@@ -1,22 +1,32 @@
 .features {
-    padding-bottom: 0;
     background-color: getColor('white-logo-color');
 }
   
 .features-list {
-    display: flex;
-    gap: 30px;
     @extend .list;
-      
-  
-    &__item {
-      min-width: 270px;
-    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
 
+    @include desktop {
+      flex-wrap: nowrap;
+    }
+ 
+    &__item {
+      width: 100%;
+
+      @include tablet {
+        @include calc(30px, 2);
+      }
+      
+      @include desktop {
+        @include calc(30px, 4)
+      }
+    }
+    
     &__frame {
       @include flexCenter;
       margin-bottom: 30px;
-      width: 270px;
       height: 120px;
       background: getColor('secondary-bgc-color');
       border-radius: 4px;
@@ -24,7 +34,7 @@
 
     &__title {
       margin-bottom: 10px;
-      @include font (700, 14, 1.14, 0.03);
+      @include font(700, 14, 1.14, 0.03);
       text-transform: uppercase;
       color: getColor('title-text-color');
     }
