@@ -6,12 +6,24 @@
     @include flexWrap;
     gap: 30px;
     @extend .list;
+    @media screen and (max-width: 767px) {
+        justify-content: center;
+    }
     
     
     &__item {
-        flex-basis: calc((100% - 60px) / 3);
+        
         background: getColor('white-logo-color');
         transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+        
+        @include tablet {
+            @include calc(30px, 2)
+        }
+
+        @include desktop {
+            @include calc(30px, 3)
+        }
+        
     }
     
     &__item:hover, &__item:focus {

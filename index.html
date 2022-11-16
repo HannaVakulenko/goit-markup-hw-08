@@ -8,13 +8,33 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" >
+    <link rel="stylesheet" href="./css/modern-normalize.min.css">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css" integrity="sha512-wpPYUAdjBVSE4KJnH1VR1HeZfpl1ub8YT/NKx4PuQ5NmX2tKuGu6U/JRp5y+Y8XG2tV+wKQpNHVUX03MfMFn9Q==" crossorigin="anonymous" referrerpolicy="no-referrer" > -->
     <link rel="stylesheet" href="./css/main.min.css">
 </head>
 <body>
     <header class="page-header">
         <div class="container page-header__nav">
             <a href="/index.html" class="logo header-logo">Web<span class="logo--dark">Studio</span></a>
+            <button class="menu-toggle js-open-menu" 
+                aria-expanded="false" 
+                aria-controls="mobile-menu">
+                <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+                    <use class="icon-menu" href="./img/icons.svg#icon-menu"></use>
+                </svg>
+            </button>
+            <div class="menu-container js-menu-container" id="mobile-menu">
+                <button class="menu-toggle js-close-menu">
+                    <svg width="40" height="40" aria-label="Перемикач мобільного меню">
+                        <use class="icon-cross" href="./img/icons.svg#icon-cross"></use>
+                </svg>
+            </button>
+                <ul class="mobile-menu">
+                    <li class="menu__item"><a class="menu__link current" href="./index.html">Студія</a></li>
+                    <li class="menu__item"><a class="menu__link" href="./portfolio.html">Портфоліо</a></li>
+                    <li class="menu__item"><a class="menu__link" href="">Контакти</a></li>
+                </ul>
+            </div>
             <ul class="menu">
                 <li class="menu__item"><a class="menu__link current" href="./index.html">Студія</a></li>
                 <li class="menu__item"><a class="menu__link" href="./portfolio.html">Портфоліо</a></li>
@@ -297,7 +317,6 @@
                 </ul>
             </div>
         </section>
-
     </main>
     <footer class="page-footer">
         <div class="container">
@@ -415,6 +434,7 @@
             </form>
         </div>
     </div>
+    <script src="./js/modal-menu.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 </html>

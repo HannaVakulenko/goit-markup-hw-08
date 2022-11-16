@@ -1,7 +1,7 @@
 .modal {
     position: absolute;
-    width: 528px;
-    min-height: 581px;
+    width: 450px;
+    min-height: 609px;
     @include absCenter;
     padding: 40px;
     background-color: getColor('white-logo-color');
@@ -9,6 +9,11 @@
     border-radius: 4px;
     transform: translate(-50%, -50%) scale(1);
     transition: transform 300ms linear;
+
+    @include desktop {
+    width: 528px;
+    min-height: 581px;
+    }
 
     .backdrop.is-hidden & {
         transform: translate(-50%, -50%) scale(0);
@@ -33,7 +38,7 @@
     
     &__title {
         margin-bottom: 12px;
-        @include font (700, 20, 1.15, 0.03);
+        @include font(700, 20, 1.50, 0.03);
         text-align: center;
         color: getColor('title-text-color');
     }
@@ -107,14 +112,18 @@
     }
     
     &__comment::placeholder {
-        @include font (null, 12, 1.17, 0.01);
+        @include font(null, 12, 1.17, 0.01);
         color: rgba(117, 117, 117, 0.5);
     }
     
     &__agreement {
-        @include font (null, 14, 1.71, 0.03);
+        @include font(null, 12, 1.17, 0.03);
         color: getColor('primary-text-color');
         @include flexCenter;
+
+        @include desktop {
+            @include font(null, 14, 1.71, 0.03);
+        }
     }
     
     &__check {

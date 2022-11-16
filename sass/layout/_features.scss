@@ -4,8 +4,7 @@
   
 .features-list {
     @extend .list;
-    display: flex;
-    flex-wrap: wrap;
+    @include flexWrap;
     gap: 30px;
 
     @include desktop {
@@ -20,7 +19,7 @@
       }
       
       @include desktop {
-        @include calc(30px, 4)
+        @include calc(30px, 4);
       }
     }
     
