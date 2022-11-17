@@ -2,6 +2,7 @@
     color: getColor('accent-color');
     position: relative;
   
+    @include tablet {
     &::after {
       content: "";
       position: absolute;
@@ -11,4 +12,5 @@
       width: 100%;
       height: 4px;
     }
+  }
   }
