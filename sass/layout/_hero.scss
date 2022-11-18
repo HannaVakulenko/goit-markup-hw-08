@@ -4,19 +4,19 @@
     height: 400px;
     margin-left: auto;
     margin-right: auto;
-    background-image: getColor('hero-gradient'), url('/img/hero_bg_mobile.jpg');
+    background-image: getColor('hero-gradient'), url('../img/hero_bg_mobile.jpg');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
     background-color: getColor('hero-ftr-bgc-color');
     @include retina2 {
-      background-image: getColor('hero-gradient'), url('/img/hero_bg_mobile-2x.jpg');
+      background-image: getColor('hero-gradient'), url('../img/hero_bg_mobile-2x.jpg');
     }
     
     @include tablet {
-      background-image: getColor('hero-gradient'), url('/img/hero_bg_tablet.jpg');
+      background-image: getColor('hero-gradient'), url('../img/hero_bg_tablet.jpg');
       @include retina2 {
-        background-image: getColor('hero-gradient'), url('/img/hero_bg_tablet-2x.jpg');
+        background-image: getColor('hero-gradient'), url('../img/hero_bg_tablet-2x.jpg');
       }
     }
 
