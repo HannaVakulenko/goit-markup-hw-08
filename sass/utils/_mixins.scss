@@ -50,6 +50,22 @@
     }
 }
 
+@mixin retina2 {
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+        @content;
+      }
+}
+
+@mixin retina3 {
+    @media (min-device-pixel-ratio: 3),
+      (min-resolution: 288dpi),
+      (min-resolution: 3dppx) {
+        @content;
+      }
+}
+
 @mixin calc($gap, $count) {
     width: calc((100% - $gap * ($count - 1)) / $count);
 }

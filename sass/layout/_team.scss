@@ -21,6 +21,10 @@
       @media screen and (min-width: 768px) and (max-width: 1199px) {
         @include calc(30px, 2);
       }
+
+      @media screen and (min-width: 1200px) {
+        @include calc(30px, 4);
+      }
     }
 
     &__info {
