@@ -5,18 +5,14 @@
 .portfolio-grid {
     @include flexWrap;
     gap: 30px;
-    align-items: stretch;
-    align-content: stretch;
     @extend .list;
-    @media screen and (max-width: 767px) {
-        justify-content: center;
-    }
-    
+       
     
     &__item {
+        width: 100%;
         background: getColor('white-logo-color');
         transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-        width: 100%;
+        display: flex;
         
         @include tablet {
             @include calc(30px, 2)
@@ -31,11 +27,21 @@
     &__item:hover, &__item:focus {
         box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
     }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+
+    }
     
     &__description {
+        width: 100%;
         border: 1px solid getColor('border-color');
         padding: 20px 24px;
-        display: block;
+        flex-grow: inherit;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
     }
     
     &__title {
