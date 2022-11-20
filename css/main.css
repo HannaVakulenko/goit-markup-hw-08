@@ -1125,7 +1125,7 @@ body {
 }
 @media screen and (max-width: 480px) {
   .subscribe__input {
-    width: 320px;
+    width: 290px;
   }
 }
 @media screen and (min-width: 768px) {
