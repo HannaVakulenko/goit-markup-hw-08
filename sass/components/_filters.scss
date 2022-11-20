@@ -3,6 +3,13 @@
     flex-wrap: wrap;
     gap: 15px 8px;
     
+
+    &__item {
+      height: 38px;
+      display: flex;
+      flex-direction: column;
+    }
+    
     @extend .list;
     @media screen and (max-width: 767px) {
       justify-content: flex-start;
@@ -16,16 +23,18 @@
    
     &__radio {
       @extend .visually-hidden;
+      
     }
 
     &__text {
+        flex-grow: 1;
         padding: 6px 22px;
         background-color: getColor('secondary-bgc-color');
         border-radius: 4px;
         border-style: none;
         font-family: inherit;
         font-style: normal;
-        @include font (500, 16, 1.63, 0.03);
+        @include font(500, 16, 1.63, 0.03);
         text-align: center;
         color: var(--title-text-color);
         transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
